@@ -1,119 +1,169 @@
 // Elementos do DOM
-const modalLogin = document.getElementById('modal-login');
-const btnLogin = document.getElementById('btn-login');
-const btnCadastro = document.getElementById('btn-cadastro');
-const closeModal = document.querySelector('.close');
-const linkCadastroModal = document.getElementById('link-cadastro-modal');
-const paginaCadastro = document.getElementById('pagina-cadastro');
-const linkLoginCadastro = document.getElementById('link-login-cadastro');
-const mainContent = document.querySelector('main');
-const header = document.querySelector('header');
-const footer = document.querySelector('footer');
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const loginModal = document.getElementById('loginModal');
+const registerModal = document.getElementById('registerModal');
+const loginLink = document.getElementById('login-link');
+const cadastroLink = document.getElementById('cadastro-link');
+const showRegister = document.getElementById('showRegister');
+const showLogin = document.getElementById('showLogin');
+const closeModals = document.querySelectorAll('.close-modal');
+const cartCount = document.querySelector('.cart-count');
+const addToCartButtons = document.querySelectorAll('.btn-add-cart');
 
-// Abrir modal de login
-btnLogin.addEventListener('click', function() {
-    modalLogin.style.display = 'flex';
+// Menu Mobile
+menuToggle.addEventListener('click', () => {
+    navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
 });
 
-// Fechar modal de login
-closeModal.addEventListener('click', function() {
-    modalLogin.style.display = 'none';
+// Modal Functions
+function openModal(modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Event Listeners for Modals
+loginLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal(loginModal);
 });
 
-// Fechar modal ao clicar fora dele
-window.addEventListener('click', function(event) {
-    if (event.target === modalLogin) {
-        modalLogin.style.display = 'none';
+cadastroLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal(registerModal);
+});
+
+showRegister.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal(loginModal);
+    openModal(registerModal);
+});
+
+showLogin.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal(registerModal);
+    openModal(loginModal);
+});
+
+closeModals.forEach(close => {
+    close.addEventListener('click', () => {
+        closeModal(loginModal);
+        closeModal(registerModal);
+    });
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === loginModal) closeModal(loginModal);
+    if (e.target === registerModal) closeModal(registerModal);
+});
+
+// Cart Functionality
+let cartItems = 0;
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartItems++;
+        cartCount.textContent = cartItems;
+        
+        const productName = button.closest('.product-card').querySelector('h3').textContent;
+        
+        // Show success message
+        showNotification(`"${productName}" adicionado ao carrinho!`);
+    });
+});
+
+// Notification Function
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        z-index: 3000;
+        animation: slideIn 0.3s ease;
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// Form Submissions
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input[type="text"]').value;
+    const password = e.target.querySelector('input[type="password"]').value;
+    
+    // Simulate login
+    if (email && password) {
+        showNotification('Login realizado com sucesso!');
+        closeModal(loginModal);
     }
 });
 
-// Ir para página de cadastro a partir do modal
-linkCadastroModal.addEventListener('click', function(e) {
+document.getElementById('registerForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    modalLogin.style.display = 'none';
-    mostrarPaginaCadastro();
-});
-
-// Ir para página de cadastro a partir do botão
-btnCadastro.addEventListener('click', function() {
-    mostrarPaginaCadastro();
-});
-
-// Voltar para login a partir da página de cadastro
-linkLoginCadastro.addEventListener('click', function(e) {
-    e.preventDefault();
-    mostrarPaginaLogin();
-});
-
-// Função para mostrar página de cadastro
-function mostrarPaginaCadastro() {
-    mainContent.style.display = 'none';
-    header.style.display = 'none';
-    footer.style.display = 'none';
-    paginaCadastro.style.display = 'block';
-}
-
-// Função para mostrar página principal (login)
-function mostrarPaginaLogin() {
-    mainContent.style.display = 'block';
-    header.style.display = 'block';
-    footer.style.display = 'block';
-    paginaCadastro.style.display = 'none';
-}
-
-// Validação do formulário de cadastro
-document.getElementById('form-cadastro').addEventListener('submit', function(e) {
-    e.preventDefault();
+    const password = e.target.querySelector('input[type="password"]').value;
+    const confirmPassword = e.target.querySelectorAll('input[type="password"]')[1].value;
     
-    const senha = document.getElementById('cadastro-senha').value;
-    const confirmarSenha = document.getElementById('cadastro-confirmar-senha').value;
-    
-    if (senha !== confirmarSenha) {
-        alert('As senhas não coincidem!');
+    if (password !== confirmPassword) {
+        showNotification('As senhas não coincidem!');
         return;
     }
     
-    // Simulação de cadastro bem-sucedido
-    alert('Cadastro realizado com sucesso!');
-    mostrarPaginaLogin();
+    showNotification('Cadastro realizado com sucesso!');
+    closeModal(registerModal);
 });
 
-// Validação do formulário de login
-document.getElementById('form-login').addEventListener('submit', function(e) {
+// Newsletter Form
+document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Simulação de login bem-sucedido
-    alert('Login realizado com sucesso!');
-    modalLogin.style.display = 'none';
+    const email = e.target.querySelector('input[type="email"]').value;
+    showNotification(`Obrigada por se cadastrar! Enviamos uma confirmação para: ${email}`);
+    e.target.reset();
 });
 
-// Adicionar produtos ao carrinho
-const botoesComprar = document.querySelectorAll('.btn-comprar');
-botoesComprar.forEach(botao => {
-    botao.addEventListener('click', function() {
-        const produto = this.parentElement.querySelector('h3').textContent;
-        alert(`Produto "${produto}" adicionado ao carrinho!`);
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
 
-// Menu dropdown para dispositivos móveis
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdown = document.querySelector('.dropdown');
-    
-    // Fechar dropdown ao clicar fora
-    document.addEventListener('click', function(event) {
-        if (!dropdown.contains(event.target)) {
-            const dropdownContent = dropdown.querySelector('.dropdown-content');
-            dropdownContent.style.display = 'none';
+// Search Functionality
+const searchInput = document.querySelector('.search-box input');
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+            showNotification(`Buscando por: ${searchTerm}`);
+            // Here you would typically redirect to search results page
         }
-    });
-    
-    // Controle do dropdown no mobile
-    dropdown.addEventListener('click', function(event) {
-        if (window.innerWidth <= 768) {
-            event.preventDefault();
-            const dropdownContent = this.querySelector('.dropdown-content');
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-        }
-    });
+    }
+});
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Brinahlly Beauty - Site carregado com sucesso!');
 });
