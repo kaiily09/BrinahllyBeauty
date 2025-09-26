@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brinahlly Beauty - Body Splash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Brinahlly Beauty</h1>
+                <p>A essência da sofisticação em cada detalhe</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="#">Minha Conta</a>
+                        <div class="dropdown-content">
+                            <a href="#" id="login-link">Login</a>
+                            <a href="#" id="cadastro-link">Cadastro</a>
+                            <a href="#">Carrinho</a>
+                            <a href="#">Minhas Compras</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-login" id="btn-login">Login</button>
+                <button class="btn btn-cadastro" id="btn-cadastro">Cadastro</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Banner -->
+        <section class="banner" id="home">
+            <h2>Body Splash Collection</h2>
+            <p>Descubra nossa linha exclusiva de Body Splash, criada para realçar sua beleza natural com fragrâncias únicas e duradouras.</p>
+        </section>
+
+        <!-- Seção de produtos -->
+        <section class="produtos" id="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="grid-produtos">
+                <!-- Produto 1 -->
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Body Splash Flor de Cerejeira">
+                    <div class="produto-info">
+                        <h3>Flor de Cerejeira</h3>
+                        <p>Fragrância suave e floral com notas de cerejeira e jasmim.</p>
+                        <div class="produto-preco">R$ 49,90</div>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Body Splash Brisa Tropical">
+                    <div class="produto-info">
+                        <h3>Brisa Tropical</h3>
+                        <p>Notas refrescantes de coco e abacaxi com um toque exótico.</p>
+                        <div class="produto-preco">R$ 54,90</div>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Body Splash Vanilla Dream">
+                    <div class="produto-info">
+                        <h3>Vanilla Dream</h3>
+                        <p>Doce e aconchegante, com notas cremosas de baunilha e âmbar.</p>
+                        <div class="produto-preco">R$ 52,90</div>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="produto">
+                    <img src="https://via.placeholder.com/300x200" alt="Body Splash Lavanda Serena">
+                    <div class="produto-info">
+                        <h3>Lavanda Serena</h3>
+                        <p>Acalmante e relaxante, com essência pura de lavanda francesa.</p>
+                        <div class="produto-preco">R$ 47,90</div>
+                        <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="form-login">
+                <div class="form-group">
+                    <label for="login-email">E-mail ou Nome de Usuário</label>
+                    <input type="text" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-senha">Senha</label>
+                    <input type="password" id="login-senha" required>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+                <div class="form-footer">
+                    <p>Não tem uma conta? <a href="#" id="link-cadastro-modal">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Página de Cadastro (inicialmente oculta) -->
+    <div id="pagina-cadastro" style="display: none;">
+        <main>
+            <div class="cadastro-container">
+                <h2>Cadastro</h2>
+                <form id="form-cadastro">
+                    <div class="form-group">
+                        <label for="cadastro-email">E-mail</label>
+                        <input type="email" id="cadastro-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastro-senha">Senha</label>
+                        <input type="password" id="cadastro-senha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cadastro-confirmar-senha">Confirmar Senha</label>
+                        <input type="password" id="cadastro-confirmar-senha" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Cadastrar-se</button>
+                    <div class="form-footer">
+                        <p>Já tem uma conta? <a href="#" id="link-login-cadastro">Faça login</a></p>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Brinahlly Beauty</h3>
+                <p>A essência da sofisticação em cada detalhe</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@brinahllybeauty.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="#home">Home</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Brinahlly Beauty. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
