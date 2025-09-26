@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #B695c0;
-    --primary-dark: #9e7ca9;
+    --primary-color: #b788e4;
+    --primary-dark: #b788e4;
     --white: #ffffff;
     --black: #333333;
     --gray-light: #f8f8f8;
     --gray: #666666;
     --gray-dark: #444444;
-    --sale: #ff4444;
+    --sale: #b788e4;
     --border: #e0e0e0;
     --success: #28a745;
 }
@@ -58,7 +58,7 @@ body {
 /* Header */
 .header {
     background: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px #b788e4;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -481,7 +481,7 @@ body {
 }
 
 .offer-banner {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    background: linear-gradient(135deg, #b788e4 0%, #b788e4 100%);
     color: var(--white);
     padding: 60px;
     border-radius: 15px;
