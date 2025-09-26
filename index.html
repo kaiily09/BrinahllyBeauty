@@ -31,8 +31,13 @@
                 </div>
                 
                 <div class="logo">
-                    <h1>Brinahlly Beauty</h1>
-                    <p>A essência da sofisticação em cada detalhe</p>
+                    <div class="logo-image">
+                        <img src="logo.png" alt="Brinahlly Beauty" onerror="this.style.display='none'">
+                        <div class="logo-text">
+                            <h1>Brinahlly Beauty</h1>
+                            <p>A essência da sofisticação em cada detalhe</p>
+                        </div>
+                    </div>
                 </div>
 
                 <nav class="nav-menu">
@@ -63,21 +68,31 @@
                         <div class="dropdown-menu">
                             <a href="#" id="login-link">Login</a>
                             <a href="#" id="cadastro-link">Cadastrar</a>
-                            <a href="#">Minhas Compras</a>
-                            <a href="#">Meus Favoritos</a>
+                            <a href="#" id="minhas-compras-link">Minhas Compras</a>
+                            <a href="#" id="favoritos-link">Meus Favoritos</a>
                         </div>
                     </div>
 
                     <div class="cart-icon">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count">0</span>
+                        <div class="dropdown-menu">
+                            <div class="cart-preview">
+                                <h4>Seu Carrinho</h4>
+                                <div class="cart-items"></div>
+                                <div class="cart-total">
+                                    <span>Total: R$ 0,00</span>
+                                </div>
+                                <button class="btn-primary">Finalizar Compra</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Hero Banner -->
     <section class="hero-banner" id="home">
         <div class="container">
             <div class="hero-content">
@@ -131,7 +146,7 @@
             <h2 class="section-title">Body Splash Mais Vendidos</h2>
             <div class="products-grid">
                 <!-- Produto 1 -->
-                <div class="product-card">
+                <div class="product-card" data-id="1" data-price="49.90">
                     <div class="product-badge">MAIS VENDIDO</div>
                     <img src="https://via.placeholder.com/300x300" alt="Flor de Cerejeira">
                     <div class="product-info">
@@ -141,12 +156,15 @@
                             <span class="current-price">R$ 49,90</span>
                             <span class="installment">ou 3x de R$ 16,63</span>
                         </div>
-                        <button class="btn-add-cart">Adicionar à Sacola</button>
+                        <div class="product-actions">
+                            <button class="btn-comprar">Comprar Agora</button>
+                            <button class="btn-add-cart">Adicionar à Sacola</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Produto 2 -->
-                <div class="product-card">
+                <div class="product-card" data-id="2" data-price="54.90">
                     <div class="product-badge">LANÇAMENTO</div>
                     <img src="https://via.placeholder.com/300x300" alt="Brisa Tropical">
                     <div class="product-info">
@@ -156,12 +174,15 @@
                             <span class="current-price">R$ 54,90</span>
                             <span class="installment">ou 4x de R$ 13,73</span>
                         </div>
-                        <button class="btn-add-cart">Adicionar à Sacola</button>
+                        <div class="product-actions">
+                            <button class="btn-comprar">Comprar Agora</button>
+                            <button class="btn-add-cart">Adicionar à Sacola</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Produto 3 -->
-                <div class="product-card">
+                <div class="product-card" data-id="3" data-price="52.90">
                     <img src="https://via.placeholder.com/300x300" alt="Vanilla Dream">
                     <div class="product-info">
                         <h3>Vanilla Dream</h3>
@@ -171,12 +192,15 @@
                             <span class="old-price">R$ 59,90</span>
                             <span class="installment">ou 3x de R$ 17,63</span>
                         </div>
-                        <button class="btn-add-cart">Adicionar à Sacola</button>
+                        <div class="product-actions">
+                            <button class="btn-comprar">Comprar Agora</button>
+                            <button class="btn-add-cart">Adicionar à Sacola</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Produto 4 -->
-                <div class="product-card">
+                <div class="product-card" data-id="4" data-price="47.90">
                     <img src="https://via.placeholder.com/300x300" alt="Lavanda Serena">
                     <div class="product-info">
                         <h3>Lavanda Serena</h3>
@@ -185,7 +209,10 @@
                             <span class="current-price">R$ 47,90</span>
                             <span class="installment">ou 2x de R$ 23,95</span>
                         </div>
-                        <button class="btn-add-cart">Adicionar à Sacola</button>
+                        <div class="product-actions">
+                            <button class="btn-comprar">Comprar Agora</button>
+                            <button class="btn-add-cart">Adicionar à Sacola</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,12 +252,30 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Brinahlly Beauty</h3>
-                    <p>A essência da sofisticação em cada detalhe</p>
+                    <div class="footer-logo">
+                        <h3>Brinahlly Beauty</h3>
+                        <p>A essência da sofisticação em cada detalhe</p>
+                    </div>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <h4>Siga-nos</h4>
+                        <div class="social-icons">
+                            <a href="https://instagram.com/brinahllybeauty" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://facebook.com/brinahllybeauty" target="_blank" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://tiktok.com/@brinahllybeauty" target="_blank" class="social-link">
+                                <i class="fab fa-tiktok"></i>
+                                <span>TikTok</span>
+                            </a>
+                            <a href="https://whatsapp.com" target="_blank" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -248,7 +293,7 @@
                     <h4>Ajuda</h4>
                     <ul>
                         <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Meus Pedidos</a></li>
+                        <li><a href="#" id="footer-minhas-compras">Meus Pedidos</a></li>
                         <li><a href="#">Trocas e Devoluções</a></li>
                         <li><a href="#">Fale Conosco</a></li>
                     </ul>
@@ -259,11 +304,15 @@
                     <p><i class="fas fa-phone"></i> (11) 4004-1824</p>
                     <p><i class="fas fa-envelope"></i> contato@brinahllybeauty.com</p>
                     <p><i class="fas fa-clock"></i> Seg à Sex: 9h às 18h</p>
+                    <div class="security-seal">
+                        <i class="fas fa-lock"></i>
+                        <span>Site 100% Seguro</span>
+                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Brinahlly Beauty. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Brinahlly Beauty. Todos os direitos reservados.</p>
                 <div class="payment-methods">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-mastercard"></i>
@@ -281,14 +330,28 @@
             <h2>Login</h2>
             <form id="loginForm">
                 <div class="form-group">
-                    <input type="text" placeholder="E-mail ou CPF" required>
+                    <input type="text" id="loginEmail" placeholder="E-mail ou CPF" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Senha" required>
+                    <input type="password" id="loginPassword" placeholder="Senha" required>
                 </div>
                 <button type="submit" class="btn-primary">Entrar</button>
+                <div class="social-login">
+                    <p>Ou entre com:</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn-social btn-google">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button type="button" class="btn-social btn-facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button type="button" class="btn-social btn-instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </button>
+                    </div>
+                </div>
                 <div class="form-links">
-                    <a href="#">Esqueci minha senha</a>
+                    <a href="#" id="forgot-password">Esqueci minha senha</a>
                     <a href="#" id="showRegister">Criar conta</a>
                 </div>
             </form>
@@ -302,29 +365,62 @@
             <h2>Criar Conta</h2>
             <form id="registerForm">
                 <div class="form-group">
-                    <input type="text" placeholder="Nome completo" required>
+                    <input type="text" id="registerName" placeholder="Nome completo" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" id="registerEmail" placeholder="E-mail" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Senha" required>
+                    <input type="password" id="registerPassword" placeholder="Senha" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Confirmar senha" required>
+                    <input type="password" id="registerConfirmPassword" placeholder="Confirmar senha" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" placeholder="Celular (DDD) + número" required>
+                    <input type="tel" id="registerPhone" placeholder="Celular (DDD) + número" required>
                 </div>
                 <div class="form-group checkbox">
                     <input type="checkbox" id="newsletter" checked>
                     <label for="newsletter">Desejo receber ofertas e novidades</label>
                 </div>
                 <button type="submit" class="btn-primary">Criar Conta</button>
+                <div class="social-login">
+                    <p>Ou cadastre-se com:</p>
+                    <div class="social-buttons">
+                        <button type="button" class="btn-social btn-google">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button type="button" class="btn-social btn-facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button type="button" class="btn-social btn-instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </button>
+                    </div>
+                </div>
                 <div class="form-links">
                     <a href="#" id="showLogin">Já tenho conta</a>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal Minhas Compras -->
+    <div id="comprasModal" class="modal">
+        <div class="modal-content large">
+            <span class="close-modal">&times;</span>
+            <h2>Minhas Compras</h2>
+            <div class="compras-content">
+                <div class="empty-state" id="empty-compras">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Nenhum pedido encontrado</h3>
+                    <p>Você ainda não realizou nenhuma compra.</p>
+                    <button class="btn-primary" id="start-shopping">Começar a Comprar</button>
+                </div>
+                <div class="orders-list" id="orders-list" style="display: none;">
+                    <!-- Pedidos serão carregados aqui -->
+                </div>
+            </div>
         </div>
     </div>
 
