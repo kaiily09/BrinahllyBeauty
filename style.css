@@ -502,6 +502,7 @@ body {
     opacity: 0.9;
 }
 
+/* Botão específico "Aproveitar Oferta" */
 .offer-banner .btn-primary {
     background: #b788e4; /* Lilás */
     color: var(--white); /* Texto branco */
