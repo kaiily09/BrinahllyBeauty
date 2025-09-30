@@ -463,6 +463,151 @@ body {
     margin-bottom: 25px;
     opacity: 0.9;
 }
+/* Tablet */
+@media (max-width: 1024px) {
+    .offer-content {
+        min-height: 350px;
+    }
+    
+    .offer-text {
+        padding: 30px;
+    }
+    
+    .offer-text h3 {
+        font-size: 2rem;
+    }
+    
+    .offer-price {
+        font-size: 2.5rem;
+    }
+    
+    .original-price {
+        font-size: 1.25rem;
+    }
+    
+    .offer-image img {
+        max-height: 300px;
+    }
+}
+
+/* Tablet Pequeno */
+@media (max-width: 768px) {
+    .offers-section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .offer-content {
+        flex-direction: column;
+        min-height: auto;
+        text-align: center;
+    }
+    
+    .offer-text {
+        padding: 30px 20px;
+        order: 2;
+    }
+    
+    .offer-image {
+        padding: 20px;
+        order: 1;
+    }
+    
+    .offer-text h3 {
+        font-size: 1.75rem;
+    }
+    
+    .offer-price {
+        font-size: 2.25rem;
+    }
+    
+    .original-price {
+        font-size: 1.1rem;
+    }
+    
+    .offer-banner .btn-primary {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .offers-section {
+        padding: 30px 0;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .offer-banner {
+        border-radius: 15px;
+    }
+    
+    .offer-text {
+        padding: 25px 15px;
+    }
+    
+    .offer-image {
+        padding: 15px;
+    }
+    
+    .offer-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .offer-text p {
+        font-size: 1.1rem;
+    }
+    
+    .offer-price {
+        font-size: 2rem;
+    }
+    
+    .original-price {
+        font-size: 1rem;
+    }
+    
+    .offer-image img {
+        max-height: 200px;
+    }
+    
+    .offer-banner .btn-primary {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Mobile Muito Pequeno */
+@media (max-width: 360px) {
+    .offer-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .offer-price {
+        font-size: 1.75rem;
+    }
+    
+    .offer-text {
+        padding: 20px 10px;
+    }
+    
+    .offer-image {
+        padding: 10px;
+    }
+    
+    .offer-image img {
+        max-height: 180px;
+    }
+}
 
 /* Newsletter */
 .newsletter-section {
