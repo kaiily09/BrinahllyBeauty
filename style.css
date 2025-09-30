@@ -492,13 +492,15 @@ body {
 
 .offer-content h3 {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 15px
+    var(--white)
 }
 
 
 .offer-content p {
     font-size: 18px;
     margin-bottom: 25px;
+    color: #b788e4;
     opacity: 0.9;
 }
 
