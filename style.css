@@ -534,8 +534,8 @@ body {
 }
 
 .newsletter-form button {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--gray-light);
+    color: var(--primary-color);
     border: none;
     padding: 12px 25px;
     border-radius: 25px;
