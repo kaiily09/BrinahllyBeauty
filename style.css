@@ -481,7 +481,7 @@ body {
 }
 
 .offer-banner {
-    background: linear-gradient( #b788e4; #b788e4;)  
+    background: #b788e4; 
     color: var(--white);
     padding: 60px;
     border-radius: 15px;
