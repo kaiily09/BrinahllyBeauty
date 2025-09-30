@@ -501,7 +501,7 @@ body {
 
 /* Newsletter */
 .newsletter-section {
-    background: var(--primary-color);
+    background: var(--gray-dark);
     color: var(--white);
     padding: 60px 0;
     text-align: center;
