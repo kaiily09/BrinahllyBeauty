@@ -950,3 +950,22 @@ body {
         height: 40px;
     }
 }
+
+/* Opcional: Alterar todos os botões primários para lilás */
+.btn-primary {
+    background: #b788e4;
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #9e7ca9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(183, 136, 228, 0.3);
+}
