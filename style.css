@@ -745,7 +745,7 @@ body {
 
 .empty-state h3 {
     margin-bottom: 10px;
-    color: var(--gray);
+    color: var(--primary-color);
 }
 
 .orders-list {
@@ -775,7 +775,7 @@ body {
 }
 
 .order-date {
-    color: var(--gray);
+    color: var(#d7c7e6);
 }
 
 .order-status {
