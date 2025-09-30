@@ -738,21 +738,21 @@ body {
 }
 
 .btn-google:hover {
-    background: #db4437;
+    background: #b788e4;
     color: white;
-    border-color: #db4437;
+    border-color: #b788e4;
 }
 
 .btn-facebook:hover {
-    background: #4267B2;
+    background: #b788e4;
     color: white;
-    border-color: #4267B2;
+    border-color: #b788e4;
 }
 
 .btn-instagram:hover {
-    background: #E1306C;
+    background: #b788e4;
     color: white;
-    border-color: #E1306C;
+    border-color: #b788e4;
 }
 
 .form-links {
