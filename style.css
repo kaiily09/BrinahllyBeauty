@@ -471,7 +471,7 @@ body {
 }
 
 .btn-add-cart:hover {
-    background: var(--primary-color);
+    background: var(--black);
     color: var(--white);
 }
 
