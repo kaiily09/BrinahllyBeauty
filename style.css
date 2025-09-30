@@ -480,26 +480,33 @@ body {
     padding: 60px 0;
 }
 
-
 .offer-banner {
-    background: #b788e4;
-    color: var(--black);
+    background: linear-gradient(135deg, #b788e4 0%, #9e7ca9 100%);
+    color: var(--white);
     padding: 60px;
     border-radius: 15px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
+.offer-content {
+    position: relative;
+    z-index: 1;
+}
 
 .offer-content h3 {
     font-size: 32px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 
 .offer-content p {
     font-size: 18px;
     margin-bottom: 25px;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: var(--white);
 }
 
 /* Botão específico "Aproveitar Oferta" */
