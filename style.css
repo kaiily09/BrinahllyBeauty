@@ -317,44 +317,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Categories Section */
-.categories-section {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: var(--primary-color);
-}
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.category-card {
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-}
-
-.category-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.category-card h3 {
-    font-size: 18px;
-    color: var(--black);
-}
-
 /* Products Section */
 .products-section {
     padding: 60px 0;
