@@ -482,7 +482,7 @@ body {
 
 .offer-banner {
     background: #b788e4; 
-    color: var(--primary-color);
+    color: var(--black);
     padding: 60px;
     border-radius: 15px;
     text-align: center;
@@ -501,7 +501,7 @@ body {
 
 /* Newsletter */
 .newsletter-section {
-    background: var(--gray-dark);
+    background: var(--primary-color);
     color: var(--white);
     padding: 60px 0;
     text-align: center;
