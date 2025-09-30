@@ -502,6 +502,70 @@ body {
     opacity: 0.9;
 }
 
+.offer-banner .btn-primary {
+    background: #b788e4; /* Lilás */
+    color: var(--white); /* Texto branco */
+    padding: 15px 35px;
+    border: 2px solid var(--white); /* Borda branca */
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.offer-banner .btn-primary:hover {
+    background: var(--white); /* Fundo branco no hover */
+    color: #b788e4; /* Texto lilás no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    border-color: #b788e4; /* Borda lilás no hover */
+}
+
+/* Responsividade para o botão de oferta */
+@media (max-width: 768px) {
+    .offer-banner {
+        padding: 40px 30px;
+    }
+    
+    .offer-content h3 {
+        font-size: 28px;
+    }
+    
+    .offer-content p {
+        font-size: 16px;
+    }
+    
+    .offer-banner .btn-primary {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-banner {
+        padding: 30px 20px;
+    }
+    
+    .offer-content h3 {
+        font-size: 24px;
+    }
+    
+    .offer-content p {
+        font-size: 14px;
+    }
+    
+    .offer-banner .btn-primary {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
 /* Newsletter */
 .newsletter-section {
     background: var(--primary-color);
