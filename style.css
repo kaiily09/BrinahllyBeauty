@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #b788e4;
+    --primary-color: #b788e4; /*banner de cima*/
     --primary-dark: #b788e4;
     --white: #ffffff;
     --black: #b788e4; /*faixinha de cima e icones*/
     --gray-light: #ffffff;
-    --gray-dark: #000000;
+    --gray-dark: #b788e4; /*botão cadrasto de baixo*/
     --gray: #b788e4; /*lupinha*/
-    --sale: #ffffff;
+    --sale: #000000;
     --border: #e0e0e0;
     --success: #28a745;
 }
