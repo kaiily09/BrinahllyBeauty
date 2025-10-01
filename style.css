@@ -6,13 +6,13 @@
 }
 
 :root {
-    --primary-color: #8000ff;
-    --primary-dark: #8400ff;
+    --primary-color: #b788e4;
+    --primary-dark: #b788e4;
     --white: #ffffff;
-    --black: #8400ff;
+    --black: #b788e4;
     --gray-light: #f8f8f8;
-    --gray: #8400ff;
-    --gray-dark: #8400ff;
+    --gray: #b788e4;
+    --gray-dark: #b788e4;
     --sale: #ffffff;
     --border: #e0e0e0;
     --success: #28a745;
