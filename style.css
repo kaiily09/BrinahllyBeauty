@@ -17,10 +17,7 @@
     --success: #28a745;
 }
 
-.footer {
- --gray-dark: #470085;
- --black: #000000;
-}
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -934,4 +931,9 @@ body {
     background: #9e7ca9;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(183, 136, 228, 0.3);
+}
+
+.footer {
+ --gray-dark: #470085;
+ --black: #000000;
 }
