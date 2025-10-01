@@ -13,8 +13,8 @@
     --gray-light: #ffffff;
     --gray-dark: #b788e4; /*botão cadrasto de baixo*/
     --gray: #b788e4; /*lupinha*/
-    --sale: #ffffff; /*número na sacola*/
-    --border: #e0e0e0;
+    --sale: #b788e4; /*número na sacola*/
+    --border: #000000;
     --success: #b788e4;
 }
 
