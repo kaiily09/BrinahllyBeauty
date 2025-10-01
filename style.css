@@ -8,9 +8,9 @@
 :root {
     --primary-color: #b788e4; /*banner de cima*/
     --primary-dark: #b788e4;
-    --white: #000000;
+    --white: #ffffff; /*geral*/
     --black: #b788e4; /*faixinha de cima e icones*/
-    --gray-light: #ffffff;
+    --gray-light: #000000;
     --gray-dark: #b788e4; /*botão cadrasto de baixo*/
     --gray: #b788e4; /*lupinha*/
     --sale: #b788e4; /*número na sacola*/
