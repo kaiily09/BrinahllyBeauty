@@ -7,6 +7,7 @@
 
 :root {
     --primary-color: #b788e4; /*banner de cima*/
+    --primary-dark:var(--black)
     --white: #ffffff; /*geral*/
     --black: #b788e4; /*faixinha de cima e icones*/
     --gray-light: #ffffff; /*aparência inicial do cadastrar de baixo */
