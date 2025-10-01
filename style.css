@@ -128,7 +128,7 @@ body {
     top: 100%;
     left: 0;
     background: var(--white);
-    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     min-width: 200px;
     display: none;
     border-radius: 5px;
