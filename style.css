@@ -6,11 +6,12 @@
 }
 
 :root {
-    --primary-color: #000000;
+    --primary-color: #b788e4;
     --primary-dark: #b788e4;
     --white: #ffffff;
     --black: #b788e4; /*faixinha de cima e icones*/
     --gray-light: #ffffff;
+    --gray-dark: #000000;
     --gray: #b788e4; /*lupinha*/
     --sale: #ffffff;
     --border: #e0e0e0;
@@ -934,6 +935,6 @@ body {
 }
 
 .footer {
- --gray-dark: #d5c1e7;
+ 
  --black: #c39de791;
 }
