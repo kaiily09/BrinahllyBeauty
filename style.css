@@ -9,7 +9,7 @@
     --primary-color: #b788e4;
     --primary-dark: #b788e4;
     --white: #ffffff;
-    --black: #deccee;
+    --black: #b788e4;
     --gray-light: #ffffff;
     --gray: #b788e4;
     --sale: #ffffff;
@@ -935,5 +935,5 @@ body {
 
 .footer {
  --gray-dark: #d5c1e7;
- --black: #b788e491;
+ --black: #c39de791;
 }
