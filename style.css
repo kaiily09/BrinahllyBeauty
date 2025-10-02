@@ -136,7 +136,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-    background: var(--gray-light);
+    background: var(#ffffff83);
 }
 
 .header-actions {
