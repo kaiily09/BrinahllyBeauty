@@ -73,18 +73,6 @@ body {
     padding: 15px 0;
 }
 
-.logo-image {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-image img {
-    height: 50px;
-    width: auto;
-    border-radius: 5px;
-}
-
 .logo-text h1 {
     color: var(--primary-color);
     font-size: 28px;
