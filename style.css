@@ -57,39 +57,7 @@ body {
     opacity: 0.8;
 }
 
-/* Header */
-.header {
-    background: var(--white);
-    box-shadow: 0 2px 10px #b788e4; /*brilhinho em baixo da barra branca*/
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0;
-}
-
-.logo-text h1 {
-    color: var(--primary-color);
-    font-size: 28px;
-    margin-bottom: 5px;
-}
-
-.logo-text p {
-    color: var(--gray);
-    font-size: 12px;
-    font-style: italic;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 20px;
-    cursor: pointer;
-}
 
 .nav-menu {
     align-items: center;
