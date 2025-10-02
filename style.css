@@ -503,6 +503,13 @@ body {
 }
 
 /* Footer */
+
+.footer {
+ 
+ background-color: var(--lilac); 
+ 
+}
+
 .footer {
     background: var(--black);
     color: var(--white);
