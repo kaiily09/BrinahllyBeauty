@@ -15,7 +15,9 @@
     --sale: #b788e4; /*número na sacola*/
     --border: #b788e4; /*borda da pesquisa*/
     --success: #b788e4; /*confirmação de sacolas*/
-}
+    
+
+ 
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
