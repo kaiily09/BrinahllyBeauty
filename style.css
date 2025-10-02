@@ -18,6 +18,11 @@
     --success: #b788e4; /*confirmação de sacolas*/
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--black);
+}
 
 
 
