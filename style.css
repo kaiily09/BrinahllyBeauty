@@ -6,26 +6,23 @@
 }
 
 :root {
-    --primary-color: #b788e4; /*banner de cima*/
-    --white: #ffffff; /*geral*/
-    --black: #b788e4; /*faixinha de cima e icones*/
-    --gray-light: #ffffff; /*aparência inicial do cadastrar de baixo */
-    --gray-dark: #ffffff; /*botão cadrasto de baixo*/
-    --gray: #010001; /*lupinha*/
-    --sale: #b788e4; /*número na sacola*/
-    --border: #b788e4; /*borda da pesquisa*/
-    --success: #b788e4; /*confirmação de sacolas*/
-    
-
- 
+    --primary-color: #b788e4;
+    --primary-dark: #b788e4;
+    --white: #ffffff;
+    --black: #b788e4;
+    --gray-light: #b788e4;
+    --gray: #666666;
+    --gray-dark: #ffff;
+    --sale: #b788e4;
+    --border: #e0e0e0;
+    --success: #28a745;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--black);
 }
-
-
 
 .container {
     max-width: 1200px;
@@ -61,7 +58,7 @@ body {
 /* Header */
 .header {
     background: var(--white);
-    box-shadow: 0 2px 10px #b788e4; /*brilhinho em baixo da barra branca*/
+    box-shadow: 0 2px 10px #b788e4;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -108,7 +105,6 @@ body {
 .nav-menu a:hover {
     color: var(--primary-color);
 }
-
 
 .dropdown {
     position: relative;
@@ -505,7 +501,6 @@ body {
 }
 
 /* Footer */
-
 .footer {
     background: var(--black);
     color: var(--white);
