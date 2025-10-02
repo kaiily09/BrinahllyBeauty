@@ -92,6 +92,9 @@ body {
 }
 
 .nav-menu {
+    align-items: center;
+}
+.nav-menu {
     display: flex;
     justify-content: center; /* Centraliza os itens */
 
