@@ -93,8 +93,8 @@ body {
 
 .nav-menu ul {
     display: flex;
-    list-style: none;
-    gap: 10px;
+    justify-content: center; /* Centraliza os itens */
+    aling-items: center;
 }
 
 .nav-menu a {
@@ -136,7 +136,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-    background: var(#ffffff83);
+    background: var(--gray-light);
 }
 
 .header-actions {
