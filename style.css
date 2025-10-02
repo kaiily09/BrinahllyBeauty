@@ -94,7 +94,7 @@ body {
 .nav-menu ul {
     display: flex;
     list-style: none;
-    gap: 05px;
+    gap: 00000005px;
 }
 
 .nav-menu a {
