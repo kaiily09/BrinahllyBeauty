@@ -6,17 +6,19 @@
 }
 
 :root {
-    --primary-color: #b788e4;
-    --primary-dark: #b788e4;
-    --white: #ffffff;
-    --black: #b788e4;
-    --gray-light: #b788e4;
-    --gray: #666666;
-    --gray-dark: #ffff;
-    --sale: #b788e4;
-    --border: #e0e0e0;
-    --success: #28a745;
+    --primary-color: #b788e4; /*banner de cima*/
+    --primary-dark:#b788e4;
+    --white: #ffffff; /*geral*/
+    --black: #b788e4; /*faixinha de cima e icones*/
+    --gray-light: #ffffff; /*aparência inicial do cadastrar de baixo */
+    --gray-dark: #ffffff; /*botão cadrasto de baixo*/
+    --gray: #010001; /*lupinha*/
+    --sale: #b788e4; /*número na sacola*/
+    --border: #b788e4; /*borda da pesquisa*/
+    --success: #b788e4; /*confirmação de sacolas*/
 }
+
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -58,7 +60,7 @@ body {
 /* Header */
 .header {
     background: var(--white);
-    box-shadow: 0 2px 10px #b788e4;
+    box-shadow: 0 2px 10px #b788e4; /*brilhinho em baixo da barra branca*/
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -89,21 +91,28 @@ body {
     cursor: pointer;
 }
 
-.nav-menu ul {
+.nav-menu {
+    align-items: center;
+}
+
+.nav-menu {
     display: flex;
+    justify-content: center; /* Centraliza os itens */
+
+}
+
+.nav-menu ul {
     list-style: none;
-    gap: 30px;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-menu a {
+nav ul li a {
     text-decoration: none;
-    color: var(--black);
+    color: #b788e4;
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: var(--primary-color);
 }
 
 .dropdown {
@@ -918,4 +927,10 @@ body {
     background: #9e7ca9;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(183, 136, 228, 0.3);
+}
+
+.footer {
+ 
+ background-color: var(--lilac); 
+ 
 }
