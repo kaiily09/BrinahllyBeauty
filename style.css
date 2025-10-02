@@ -110,20 +110,7 @@ nav ul li a {
     color: #b788e4;
     font-weight: 500;
 
-
-
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--black);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: var(--primary-color);
-}
-
+    
 .dropdown {
     position: relative;
 }
