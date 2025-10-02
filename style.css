@@ -7,7 +7,6 @@
 
 :root {
     --primary-color: #b788e4; /*banner de cima*/
-    --primary-dark:#b788e4;
     --white: #ffffff; /*geral*/
     --black: #b788e4; /*faixinha de cima e icones*/
     --gray-light: #ffffff; /*aparência inicial do cadastrar de baixo */
@@ -921,10 +920,4 @@ body {
     background: #9e7ca9;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(183, 136, 228, 0.3);
-}
-
-.footer {
- 
- background-color: var(--lilac); 
- 
 }
