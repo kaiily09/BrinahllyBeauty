@@ -94,7 +94,7 @@ body {
 .nav-menu {
     display: flex;
     justify-content: center; /* Centraliza os itens */
-    align-items: center;
+
 }
 
 .nav-menu ul {
@@ -926,5 +926,7 @@ nav ul li a {
 }
 
 .footer {
- --black: #c39de791;
+ 
+ background-color: var(--lilac); 
+ 
 }
