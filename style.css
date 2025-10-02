@@ -68,7 +68,7 @@ body {
 
 .header-content {
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: space-between;
     padding: 15px 0;
 }
@@ -93,7 +93,7 @@ body {
 
 .nav-menu {
     display: flex;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: top; /* Centraliza os itens */
 
 }
 
